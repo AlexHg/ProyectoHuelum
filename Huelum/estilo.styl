@@ -1,0 +1,436 @@
+//#842022
+color_principal = #881C24
+color_secundario = lighten(color_principal, 15%)
+color_fondo = #EEEFF0
+/* MODIFICANDO FOUNDATION */
+.row
+  max-width 80rem !important
+  box-align center
+  text-align center
+.sin-padding
+   padding 0 !important
+/* SISTEMA DE GRID PROPIO */
+.cont-1, .cont-2, .cont-3, .cont-4, .cont-5, .cont-6, .cont-7, .cont-8, .cont-9, .cont-10, .cont-11, .cont-12, .cont-5
+   min-height 2em
+   text-align left
+   padding .5em 1em
+   @media only screen and (max-width: 767px)
+      width 100% !important
+.cont-1
+  width 8%
+.cont-2
+  width 16%
+.cont-3
+  width 24%
+.cont-4
+  width 33%
+.cont-5
+  width 41%
+.cont-6
+  width 49%
+.cont-7
+  width 58%
+.cont-8
+  width 66%
+.cont-9
+  width 74%
+.cont-10
+  width 83%
+.cont-11
+  width 91%
+.cont-12
+  width 99%
+.columna 
+  display inline-block
+  vertical-align top
+.row 
+  width 100%
+  margin-left auto
+  margin-right auto
+  margin-top 0
+  margin-bottom 0
+  max-width 62.5rem
+  *zoom 1
+  .row:before, .row:after 
+    content " "
+    display table
+  .row:after 
+    clear both
+  .row.collapse > .column, .row.collapse > .columns 
+    position relative
+    padding-left 0
+    padding-right 0
+    float left
+  .row.collapse .row 
+    margin-left 0
+    margin-right 0 
+  .row .row 
+    width auto
+    margin-left -0.9375rem
+    margin-right -0.9375rem
+    margin-top 0
+    margin-bottom 0
+    max-width none
+    *zoom 1 
+    .row .row:before, .row .row:after 
+      content " "
+      display table
+    .row .row:after 
+      clear both
+    .row .row.collapse
+      width auto
+      margin 0
+      max-width none
+      *zoom 1
+      .row .row.collapse:before, .row .row.collapse:after 
+        content " "
+        display table
+      .row .row.collapse:after 
+        clear both
+/* FIN DEL SISTEMA DE GRID PROPIO */
+.tab-bar-section, #left-hdbtn
+   .title
+      h1, h2
+         color color_principal
+body
+	textarea
+		resize none
+	a
+		color lighten(color_secundario,10%)
+		&:hover
+			color color_principal
+	#header-desk
+		height 60px 
+		width 100%
+		background-color color_secundario !important
+		.rowhead
+			max-width 70.5rem !important
+		#right-hdbtn
+			text-align right
+			img
+				height 50px
+				width 50px
+				border-radius 50px
+				margin-top -3px
+		#left-hdbtn
+			text-align left
+	.tab-bar
+		background-color color_principal !important
+		h2
+			font-size 2em !important
+		#mov-desk
+			height 45px !important 
+			#nav-desk-btn-container
+				list-style none !important
+				position absolute
+				right 2em
+				color white
+				height 45px !important
+				li
+					list-style none !important
+					display inline-block
+					max-height 45px
+					span, p
+						color #EBD8D8
+					p
+						height 28px
+				li:hover
+					p
+						border-bottom 7px solid #BAB0AF
+				.active 
+					p
+						border-bottom 7px solid #535353
+					&:hover
+						p
+							border-bottom 7px solid #535353
+			.nav-desk-btn
+				text-align center
+				list-style none
+				display inline-block
+				min-width 100px
+				margin-top -.36em !important
+				.nav-desk-icon
+					font-size 1.5em
+				p
+					margin-top -.5em !important
+		.left-btn
+			border-right 1px solid darken(color_principal, 20%) !important
+		.right-btn
+			border-left 1px solid darken(color_principal, 20%) !important
+			text-align center
+			img
+				width 38px
+				height 38px
+				border-radius 100px
+				border 1px solid #272822 !important
+			.notifi-btn
+				background-color #3093DC
+				height 11px
+				width 11px
+				border-radius 50px
+				position absolute
+				right 2px
+				margin-top -1em
+				p
+					font-size 9px
+					margin-bottom 2px
+					color white
+	#border-nav
+		height 7px
+		width 100%
+		margin 0 
+		background-color color_secundario !important
+	.left-off-canvas-menu, .right-off-canvas-menu
+		background-color color_principal!important
+		li
+			label
+				background-color lighten(color_principal, 15%) !important
+				color lighten(color_secundario, 25%) !important
+			a
+				border-bottom 1px solid darken(color_principal, 25%) !important
+				&:hover
+					background-color darken(color_principal, 20%) !important
+//Main-section <<Contenido de la pagina>>
+.main-section
+	margin-top 7px
+	border-top 1px solid #D3D3D3
+	background-color color_fondo
+	min-height 800px 
+	padding-top 2em
+	.sin-padding-mobil-laterales
+		@media only screen and (max-width: 767px)
+			padding .5em 0 !important
+	.aside-container
+		min-height 20px
+		.crearPost
+			padding 0 .6em !important
+			#inputs
+				margin-top -1.4em
+				#submit
+					text-align right
+					input
+						margin-right -1em
+						width 100% !important
+			@media only screen and (max-width: 1050px)
+				.cont-6
+					width 100%
+					text-align center
+					input
+						margin-right auto !important
+						margin-bottom -1em !important
+		.aside-box
+			background-color white
+			text-align center
+			border-radius 4px
+			border 1px solid #D3D3D3
+			min-height 2em
+		.perfil-box
+			background-color white
+			text-align center
+			border-radius 4px
+			border 1px solid #D3D3D3
+			.head-profile
+				height 90px
+				border-radius 4px 4px 0 0
+				border 1px solid color_principal
+				background color_secundario
+				background-repeat no-repeat
+				background-size 100% !important
+				background-attachment fixed
+				background-position center !important
+			.img-profile
+				.imagen
+					text-align center
+					img
+						width 100px
+						height 100px
+						padding 2px
+						border-radius 100px
+						border 1px solid black 
+						margin-top -50px
+						transition all 1s
+						-webkit-transition all 1s
+						-o-transition all 1s
+						-moz-transition all 1s
+						&:hover
+							border-radius 2px
+			.info-profile
+				.info-name
+					padding-top 1.5em
+					ul
+						.info-estadistics
+							list-style none
+							display inline-block
+							margin 0 .5em
+							@media only screen and (max-width: 870px)
+								margin 0
+							.info-number
+								margin-bottom -.6em
+	#article-container
+		min-height 20px
+		@media only screen and (max-width: 767px)
+			padding .5em .4em !important
+		.article
+			background-color white
+			border-radius 4px
+			margin-bottom 1em 
+			.article-body
+				min-height 100px
+				border-top 1px solid #D3D3D3
+				border-right 1px solid #D3D3D3
+				border-left 1px solid #D3D3D3
+				border-radius 4px 4px 0 0
+				padding .5em
+				&:hover
+					border-top 1px solid #AEAEAE
+					border-right 1px solid #AEAEAE
+					border-left 1px solid #AEAEAE
+				.article-delete 
+					font-size .8em
+				.article-options
+					&:hover
+						.triangle
+							border-top 10px solid color_principal
+					.triangle
+						width 0
+						height 0
+						border-left 5px solid transparent
+						border-right 5px solid transparent
+						border-top 10px solid color_secundario
+						margin-top .45em
+			.article-image
+				width 100%
+				background-color red
+				background-repeat no-repeat
+				background-attachment fixed
+				background-position center !important
+				border-right 1px solid #D3D3D3
+				border-left 1px solid #D3D3D3
+			.with-img
+				height 120px
+			.article-bottom
+				min-height 28px
+				background-color color_secundario
+				padding .2em
+				border-radius 0 0 4px 4px
+				border-bottom 2px solid darken(color_principal, 20%)
+				border-right 2px solid darken(color_principal, 20%)
+				border-left 2px solid darken(color_principal, 20%)
+				a
+					color lighten(color_secundario,60%) !important
+					&:hover
+						color lighten(color_secundario,40%) !important
+				.article-post-nums
+					&:hover
+						.favs-icon, .likes-icon, .comments-icon
+							color lighten(color_secundario,30%)
+					.favs-icon:hover
+						.fi-star
+							color #E2C80E
+						.favs-num
+							color white
+					.likes-icon:hover
+						.fi-heart
+							color #EA4DC2
+						.likes-num
+							color white	
+					.comments-icon:hover
+						.fi-comment
+							color #BAC9D8
+						.comments-num
+							color white	
+					//active, onclick
+					.favs-icon-active
+						.fi-star
+							color #E2C80E !important
+						.favs-num
+							color white !important
+					.likes-icon-active
+						.fi-heart
+							color #EA4DC2 !important
+						.likes-num
+							color white	!important
+					.comments-icon-active
+						.fi-comment
+							color #BAC9D8 !important
+						.comments-num
+							color white	!important
+				.article-user
+					max-height 22px
+					.article-user-image 
+						height 22px
+						width 22px
+					.article-user-image, .article-user-name
+						width auto
+			.article-comment
+				background-color color_fondo !important
+				.article-comment-box
+					background-color lighten(color_fondo, 45%)
+					border-radius 0 0 4px 4px
+					margin 0 10px
+					border-bottom 1px solid #D3D3D3
+					border-right 1px solid #D3D3D3
+					border-left 1px solid #D3D3D3
+					height 10px
+					padding 0 1em
+					//display none
+					.article-comment-comments
+						min-height 30px
+						.comentario
+							border-bottom 1px solid darken(color_fondo,20%)
+							padding-top .7em
+							padding-bottom -.5em !important
+							.comment-delete
+								width auto
+								height auto
+								font-size .8em
+								a
+									height 2.5em
+							.comment-user, .comment-content
+								display inline-block
+								vertical-align top
+								margin-bottom -1.5em
+								width auto
+							.comment-user
+								width 100%
+								margin-top -1.6em
+							.comment-content
+								margin-left 45px
+								margin-top -55px
+								min-height 35px !important
+								p
+									font-size .85em !important
+							img 
+								width 35px  
+							.bottom
+								display block
+								margin 0 auto
+								font-size .8em !important
+								.user-name
+									text-align right
+									width 33%
+									margin-right 0 !important
+								.comment-option
+									text-align left
+									width 65%
+								.user-name, .comment-option
+									min-width 1px
+									display inline-block
+						.escribir-comentario
+							textarea
+								margin-top 1em
+								min-height 30px !important
+								resize none
+					.article-comment-stadistics, .article-comment-comments
+						opacity 0
+					@media only screen and (max-width: 767px)
+						margin 0 !important
+			&.comment-box-active
+				.article-comment	
+					.article-comment-box
+						//Hacer un script con estos cambios
+						height auto !important
+						display display !important
+						.article-comment-stadistics, .article-comment-comments
+							opacity 1
+

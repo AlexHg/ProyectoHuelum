@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Huelum</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="Burntheweb - Alejandro Hernandez">
+	<!--Optimizacion de mobiles-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, height=device-height,maximum-scale=2, user-scalable=no"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="handheldFriendly" content="true"/>
+    <!--Llamar al favicon-->
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!--llamar al estilo-->
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<!--Foundation estilos y js (Mejor cargar al inicio)-->
+	<link rel="stylesheet" href="dist/fonts/foundation-icons.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/foundation.css" />
+    <script src="dist/js/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    
+    <style type="text/css">
+	/* ESCONDER CAJAS POR MEDIO DE CLASES <<CSS Orientado a objetos>> */
+		body .invisible{display:none;}
+	    body .visible{display:display;}
+	    body .visiblei{display:display !important}
+		/*REGLAS: class="va1-var2"
+		var1= visible || hidden; (mostrar || esconder)
+		var2= phone || tablet || desktop; (telefono || tableta || PC)
+		*armar convinacion adecuada* para lo que se quiere mostrar o esconder y en que dispositivo*/
+	    .hidden{display:none;visibility:hidden}
+	    .visible-phone{display:none !important}
+	    .visible-tablet{display:none !important}
+	    .hidden-desktop{display:none !important}
+	    .visible-desktop{display:inherit !important}
+	    @media (min-width: 768px) and (max-width: 979px){.hidden-desktop{display:inherit !important}
+	    .visible-desktop{display:none !important}
+	    .visible-tablet{display:inherit !important}
+	    .hidden-tablet{display:none !important}}
+	    @media (max-width: 767px){.hidden-desktop{display:inherit !important}
+	    .visible-desktop{display:none !important}
+	    .visible-phone{display:inherit !important}
+	    .hidden-phone{display:none !important}}
+	</style>
+</head>
+<body>
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<header id="header-desk" class="visible-desktop tab-bar">
+		    	<div class="row rowhead">
+		    		<section class="cont-6 columna" id="left-hdbtn">
+		    			<h2 class="title">Huelum <small>beta</small></h2>
+			    	</section>
+			    	<section class="cont-6 columna" id="right-hdbtn">
+
+			   			<h3>Alejandro Hernandez &nbsp;&nbsp;<img src="profile-ex.jpg"></h3> 
+
+			   		</section>
+		    	</div>
+			</header>
+		    <nav class="tab-bar">
+		    	<div class="row">
+		    	<div id="mov-desk" class="visible-desktop">
+		    		<div class="nav-desk right">
+		    			<ul id="nav-desk-btn-container">
+		    				<li class="nav-desk-btn">
+		    					<a href="">
+		    						<span class="fi-burst nav-desk-icon"></span>
+		    						<p>Noticias</p>
+		    					</a>
+		    				</li>
+		    				<li class="nav-desk-btn">
+		    					<a href="">
+		    						<span class="fi-book nav-desk-icon"></span>
+		    						<p>Proyectos</p>
+		    					</a>
+		    				</li>
+		    				<li class="nav-desk-btn">
+		    					<a href="">
+		    						<span class="fi-torsos-all nav-desk-icon"></span>
+		    						<p>Grupos</p>
+		    					</a>
+		    				</li>
+		    				<li class="nav-desk-btn">
+		    					<a href="">
+		    						<span class="fi-comment-minus nav-desk-icon"></span>
+		    						<p>Preguntas</p>
+		    					</a>
+		    				</li>
+		    				<li class="nav-desk-btn active">
+		    					<a href="">
+		    						<span class="fi-torso nav-desk-icon"></span>
+		    						<p>Mi perfil</p>
+		    					</a>
+		    				</li>
+		    			</ul>
+		    		</div>
+					
+		    	</div>
+		    		
+		    	</div>
+		    	<div id="mov-nav" class="hidden-desktop">
+		    		<!-- Navegador para moviles -->
+		    		<section class="left-small left-btn">
+				    	<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+				    </section>
+
+				    <section class="middle tab-bar-section">
+				      <h1 class="title">Huelum</h1>
+				    </section>
+
+				    <section class="right-small right-btn">
+				      <a class="right-off-canvas-toggle" >
+				      	<span><img src="profile-ex.jpg"></span>
+						<div class="notifi-btn">
+				      		<p>5</p>
+				      	</div>
+				      </a>
+				    </section>
+		    	</div>
+			</nav>
+			<div id="border-nav" class="hidden-desktop"></div>
+
+			<aside class="left-off-canvas-menu">
+			    <ul class="off-canvas-list">
+				    <li><label>Menu principal</label></li>
+			        <li><a href="#">Noticias</a></li>
+			        <li><a href="#">Proyectos</a></li>
+			        <li class="has-submenu"><a href="#">Grupos</a>
+			            <ul class="left-submenu">
+			                <li class="back"><a href="#">Regresar</a></li>
+			                <li><label>Mis grupos (9)</label></li>
+			                <li><a href="#">ESIME Cu</a></li>
+			                <li><a href="#">Club de programacion movil</a></li>
+			                <li><a href="#">Club de arduino</a></li>
+			                <li><a href="#">Ver todos...</a></li>
+			            </ul>
+			        </li>
+			        <li><a href="#">Preguntas</a></li>
+			    </ul>
+			</aside>
+			<aside class="right-off-canvas-menu">
+			    <ul class="off-canvas-list">
+			       	<li><label>Alejandro Hernandez Gomez</label></li>
+			       	<li><a href="#">Mi perfil</a></li>
+			       	<li class="has-submenu"><a href="#">Notificaciones (7)</a>
+			           	<ul class="right-submenu">
+			               	<li class="back"><a href="#">Regresar</a></li>
+			               	<li><label>Notificaciones</label></li>
+			               	<li><a href="#">...</a></li>
+			           	</ul>
+			       	</li>
+			       	<li class="has-submenu"><a href="#">Mensajes (7)</a>
+			           	<ul class="right-submenu">
+			               	<li class="back"><a href="#">Regresar</a></li>
+			               	<li><label>Mensajes</label></li>
+			               	<li><a href="#">...</a></li>
+			           	</ul>
+			       	</li>
+			       	<li><a href="#">Configuracion</a></li>
+			       	<li><a href="#">Cerrar sesión</a></li>
+			    </ul>
+			</aside>
+		    <section class="main-section" id="contenido">
+			<!-- El contenido de la pagina va aqui -->
+				<div class="row">
+					<div class="cont-12 sin-padding-mobil-laterales">
+						<section class="cont-8 columna" id="article-container">
+
+							<article class="article" id="article1">
+								
+								<!--Con PHP, al crear articles, en su id se debera enumerar al igual que el JS interno a los articles para poder aplicar estilos por medio el DOM y asi agregandole la clase class="article comment-box-active y que asi se puedan agregar los estilos"-->
+								<div class="article-body">
+									<div class="article-delete">
+										<a class="right"><span class="fi-x"></span></a>
+									</div>
+									<div class="article-content">
+										<p>mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por el ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. </p>
+									</div>
+									<div class="article-options">
+										<a href="">Me gusta</a> &nbsp; <a href="">Favoritos</a>&nbsp; <a href="" class="right">Opciones&nbsp; <span class="right triangle"></span></a>
+									</div>
+								</div>
+								<a href="">
+									<div class="article-image with-img" style="background:url('post-back-ex.jpg')"></div>
+								</a>
+								<div class="article-bottom">
+									<div class="article-user left small">
+										<a href=""><img src="profile-ex.jpg" class="article-user-image columna">&nbsp;
+										<p class="article-user-name columna"> Alejandro</p></a>
+									</div>
+									<div class="article-post-nums">
+										<div class="right small">
+										
+
+											<a class="favs-icon" id="favs-icon1" onclick="commentBox(1,1)">
+												<span class="fi-star"></span>
+												<span class="favs-num">345</span>
+											</a>
+												
+											<a class="likes-icon" id="likes-icon1" onclick="commentBox(1,2)">
+												<span class="fi-heart "></span>
+												<span class="likes-num">45</span>
+											</a>
+											
+											<a class="comments-icon" id="comments-icon1" onclick="commentBox(1,3)">
+												<span class="fi-comment"></span>
+												<span class="comments-num">45</span>
+											</a>
+										</div>
+									</div>
+									<div class=""></div>
+								</div>
+								<div class="article-comment">
+									<div class="article-comment-box">
+										<div class="article-comment-stadistics"></div>
+										<div class="article-comment-comments">
+											<div class="comentario">
+												<div class="comment-delete">
+													<a class="right"><span class="fi-x" ></span></a>
+												</div>
+												<div class="comment-user">
+													<img src="profile-ex.jpg">
+												</div>
+												<span class="comment-content">
+													<p>l ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplo, que</p>
+												</span>
+												<div class="bottom">
+													<div class="comment-option">
+														<a href="">Me gusta</a>
+														&nbsp;
+														<a href="">favoritos</a>
+													</div>
+													<div class="user-name">
+														<a >Alejandro</a>
+													</div>
+													
+												</div>
+											</div>
+											<div class="comentario">
+												<div class="comment-delete">
+													<a class="right"><span class="fi-x" style="margin-top:-.5em"></span></a>
+												</div>
+												<div class="comment-user">
+													<img src="profile-ex.jpg">
+												</div>
+												<span class="comment-content">
+													<p>l ejemplo, que la v ción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejempl ción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejempl.</p>
+												</span>
+												<div class="bottom">
+													<div class="comment-option">
+														<a href="">Me gusta</a>
+														&nbsp;
+														<a href="">favoritos</a>
+													</div>
+													<div class="user-name">
+														<a >Alejandro</a>
+													</div>
+													
+												</div>
+											</div>
+											<div class="comentario">
+												<div class="comment-delete">
+													<a class="right"><span class="fi-x" style="margin-top:-.5em"></span></a>
+												</div>
+												<div class="comment-user">
+													<img src="profile-ex.jpg">
+												</div>
+												<span class="comment-content">
+													<p>l ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplo, que</p>
+												</span>
+												<div class="bottom">
+													<div class="comment-option">
+														<a href="">Me gusta</a>
+														&nbsp;
+														<a href="">favoritos</a>
+													</div>
+													<div class="user-name">
+														<a >Alejandro</a>
+													</div>
+													
+												</div>
+											</div>
+											<form class="escribir-comentario" name="escribirComentario" id="escribirComentario1" method="GET">
+												<!--Con php tambien se enumerará el name del form-->
+												<textarea class="escribir" placeholder="escribe sobre el post... " onkeypress="if (event.keyCode == 13) enviarComentario(1)"></textarea>
+											</form> 
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="article">
+								<div class="article-body">mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. </div>
+								<div class="article-bottom">
+									<div class="article-user left small">
+										<a href=""><img src="profile-ex.jpg" class="article-user-image columna">&nbsp;
+										<p class="article-user-name columna"> Alejandro</p></a>
+									</div>
+									<div class="article-post-nums">
+										<div class="right small">
+											<a>
+												<span class="fi-star favs-icon"></span>
+												<span class="favs-num">345</span>
+
+												<span class="fi-heart likes-icon"></span>
+												<span class="likes-num">45</span>
+
+												<span class="fi-comment coments-icon"></span>
+												<span class="coments-num">45</span>
+											</a>
+										</div>
+									</div>
+									<div class=""></div>
+								</div>
+							</article>
+							<article class="article">
+								<div class="article-body">mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. </div>
+								<div class="article-bottom">
+									<div class="article-user left small">
+										<a href=""><img src="profile-ex.jpg" class="article-user-image columna">&nbsp;
+										<p class="article-user-name columna"> Alejandro</p></a>
+									</div>
+									<div class="article-post-nums">
+										<div class="right small">
+											<a>
+												<span class="fi-star favs-icon"></span>
+												<span class="favs-num">345</span>
+
+												<span class="fi-heart likes-icon"></span>
+												<span class="likes-num">45</span>
+
+												<span class="fi-comment coments-icon"></span>
+												<span class="coments-num">45</span>
+											</a>
+										</div>
+									</div>
+									<div class=""></div>
+								</div>
+							</article>
+							
+							
+						</section>
+						<aside class="cont-4 columna hidden-phone aside-container">
+							<!-- Solo esta presente en ordenadores -->
+							<div class="perfil-box panel sin-padding">
+								<div class="head-profile" style="background:url('profile-back-ex.jpg')"></div>
+								<div class="img-profile">
+									<div class="imagen"><img src="profile-ex.jpg"></div>
+								</div>
+								<div class="info-profile">
+									<div class="info-name">
+										<h5>Alejandro Hernandez Gomez</h5>
+										<ul>
+											<li class="info-estadistics">
+												<h3 class="info-number">500</h3>
+												<h3><small>Posts</small></h3>
+												
+											</li>
+											<li class="info-estadistics">
+												<h3 class="info-number">1103</h3>
+												<h3><small>Amigos</small></h3>
+											</li>
+											<li class="info-estadistics">
+												<h3 class="info-number">32</h3>
+												<h3><small>Grupos</small></h3>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="aside-box crearPost">
+								<h4 align="center">Nueva publicacion</h4>
+								<form class="escribir-post" name="escribirPost" id="escribirPost" method="GET">
+									<!--Con php tambien se enumerará el name del form-->
+									<textarea class="escribirPost-area" placeholder="escribe algo que me agrade... "></textarea>
+									<div id="inputs">
+										<div class="cont-6 columna">
+											<input type="file" >
+										</div>
+										<div class="cont-6 columna" id="submit">
+											<input type="submit" class="button alert radius small" value="Publicar">
+										</div>
+									</div>
+									
+								</form> 
+							</div>
+						</aside>
+					</div>
+				</div>	
+					
+		    </section>
+
+			<a class="exit-off-canvas"></a>
+
+		</div>
+	</div>
+
+	
+</body>
+<script src="dist/js/jquery.js"></script>
+<!--Foundation scripts (Necesarios al final, normalmente como se hace con los archivos script, para no alentar la pagina-->
+<script src="dist/js/foundation.min.js"></script>
+<script src="dist/js/foundation/foundation.js"></script>
+<script src="dist/js/foundation/foundation.offcanvas.js"></script>
+<script src="dist/js/foundation/foundation.clearing.js"></script>
+<!--Script para iniciar foundation-->
+<script>
+	$(document).foundation();
+</script>
+<script src="dist/js/jquery/jquery.autogrowtextarea.min.js"></script>
+<script>
+	//textarea auutogrow
+    $(document).ready(function() {
+	    $(".escribir").autoGrow();
+	    //Agrega estilos al cargar todo, contrarestando scripts por defecto
+	    $(".escribir").css("min-height","30px");
+	    $(".escribir").css("height","35px");
+	    $(".escribir").css("padding-bottom","0");
+	})
+</script>
+<script type="text/javascript">
+	//En este script se agrega la clase al .article, con esto es posible ver la caja de comentarios
+	function enviarComentario(num){
+    	document.getElementById("escribirComentario"+num).submit(); 
+    }
+	function commentBox(num,box){
+
+		document.getElementById("article" + num).className = "article comment-box-active";
+		document.getElementById("favs-icon"+num).className = "favs-icon";
+		document.getElementById("likes-icon"+num).className = "likes-icon";
+		document.getElementById("comments-icon"+num).className ="comments-icon";
+		switch(box){
+			//tambien se enumeran los id de los botones de comentarios, etc.
+			case 1:
+				document.getElementById("favs-icon"+num).className = "favs-icon favs-icon-active";
+				break;
+			case 2:
+				document.getElementById("likes-icon"+num).className = "likes-icon likes-icon-active";
+				break;
+			case 3:
+				document.getElementById("comments-icon"+num).className = "comments-icon comments-icon-active";
+				break;
+		}
+	}
+</script>
+<style type="text/css">
+	.escribir{
+		min-height: 1.5em !important;
+	}
+</style>
+</html>
