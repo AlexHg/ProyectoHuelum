@@ -25,6 +25,7 @@
     
     <style type="text/css">
 	/* ESCONDER CAJAS POR MEDIO DE CLASES <<CSS Orientado a objetos>> */
+		body .invisible{display:none;}
 	    body .visible{display:display;}
 	    body .visiblei{display:display !important}
 		/*REGLAS: class="va1-var2"
@@ -54,11 +55,19 @@
 		    		<section class="cont-6 columna" id="left-hdbtn">
 		    			<h2 class="title">Huelum <small>beta</small></h2>
 			    	</section>
-			    	<section class="cont-6 columna" id="right-hdbtn">
+			    	<section data-dropdown="menu-perfil" aria-controls="menu-perfil" data-options="align:bottom" aria-expanded="false" class="cont-6 columna dropdown" id="right-hdbtn">
 
-			   			<h3>Alejandro Hernandez &nbsp;&nbsp;<img src="profile-ex.jpg"> <span class="right triangle"></span></h3> 
+			   			<a><h3>Alejandro Hernandez &nbsp;&nbsp;<img src="profile-ex.jpg"></h3> </a>
 
 			   		</section>
+			   		<ul id="menu-perfil" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+						<li><a href="#">Editar</a></li><!--Opcion visible unicamente si eres el que publico o eres moderador-->
+						<li><a href="#">Borrar</a></li><!--Opcion visible unicamente si eres el que publico o eres moderador-->
+						<li><a href="#">Reportar esta publicación</a></li>
+						<li><a href="#">Hacerlo noticia!</a></li>
+						<li><a href="#">Penalizar al autor</a></li> <!--Opcion visible unicamente si eres moderador-->
+
+					</ul>
 		    	</div>
 			</header>
 		    <nav class="tab-bar">
@@ -181,7 +190,21 @@
 										<p>mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por el ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, por ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. </p>
 									</div>
 									<div class="article-options">
-										<a href="">Me gusta</a> &nbsp; <a href="">Favoritos</a>&nbsp; <a href="" class="right">Opciones&nbsp; <span class="right triangle"></span></a>
+										<a href="">Me gusta</a> &nbsp; 
+										<a href="">Favoritos</a>&nbsp; 
+										<!--Es necesario enumerar el id de el menu del dropdown "data-dropdown="opcionesX" aria-controls="opcionesX" y tambien el ul que trae las opciones id="opciones1"-->
+										<a class="right dropdown" data-dropdown="opciones1" aria-controls="opciones1" data-options="align:left" aria-expanded="false" >
+											Opciones&nbsp; <span class="right triangle"></span>
+										</a>
+										<!--Este menu incluye las opciones de los comentarios-->
+										<ul id="opciones1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+											<li><a href="#">Editar</a></li><!--Opcion visible unicamente si eres el que publico o eres moderador-->
+											<li><a href="#">Borrar</a></li><!--Opcion visible unicamente si eres el que publico o eres moderador-->
+											<li><a href="#">Reportar esta publicación</a></li>
+											<li><a href="#">Recomendar para noticia!</a></li>
+											<li><a href="#">Penalizar al autor</a></li> <!--Opcion visible unicamente si eres moderador-->
+
+										</ul>
 									</div>
 								</div>
 								<a href="">
@@ -216,8 +239,15 @@
 								</div>
 								<div class="article-comment">
 									<div class="article-comment-box">
-										<div class="article-comment-stadistics"></div>
+										<div class="article-comment-stadistics">
+											<!--Tambien enumerar los ids de las estadisticas de cada articulo-->
+											<span id="likes1"> A <a href=""><span id="likes-num1">25</span> personas</a> le(s) gusta esto </span>
+											<span id="if-likes-and-favs1">y otra(s)</span> 
+											<span id="favs1"><a href=""> <span id="favs-num1">6</span> personas</a> la marcaron como favoritos.</span> 
+										</div>
 										<div class="article-comment-comments">
+										  <div class="comentario-hover">
+												<!--Inicio comentario hover-->
 											<div class="comentario">
 												<div class="comment-delete">
 													<a class="right"><span class="fi-x" ></span></a>
@@ -240,6 +270,8 @@
 													
 												</div>
 											</div>
+											<!--Fin comentario hover-->
+										  </div>
 											<div class="comentario">
 												<div class="comment-delete">
 													<a class="right"><span class="fi-x" style="margin-top:-.5em"></span></a>
@@ -284,9 +316,9 @@
 													
 												</div>
 											</div>
-											<form class="escribir-comentario" name="escribirComentario" id="escribirComentario1" method="GET">
+											<form class="escribir-comentario" name="escribirComentario" id="escribirComentario1" action="enviarcomentario.php" method="post">
 												<!--Con php tambien se enumerará el name del form-->
-												<textarea class="escribir" placeholder="escribe sobre el post... " onkeypress="if (event.keyCode == 13) enviarComentario(1)"></textarea>
+												<textarea class="escribir" name="comentario" placeholder="escribe sobre el post... " onkeypress="if (event.keyCode == 13) enviarComentario(1)"></textarea>
 											</form> 
 										</div>
 									</div>
@@ -405,6 +437,7 @@
 <!--Foundation scripts (Necesarios al final, normalmente como se hace con los archivos script, para no alentar la pagina-->
 <script src="dist/js/foundation.min.js"></script>
 <script src="dist/js/foundation/foundation.js"></script>
+<script src="dist/js/foundation/foundation.dropdown.js"></script>
 <script src="dist/js/foundation/foundation.offcanvas.js"></script>
 <script src="dist/js/foundation/foundation.clearing.js"></script>
 <!--Script para iniciar foundation-->
