@@ -32,8 +32,7 @@ body textarea{resize:none}
 body a{color:#cb2a35;}
 body a:hover{color:#881c24}
 body #header-desk{height:60px;width:100%;background-color:#b3252f !important;}
-body #header-desk .rowhead{max-width:70.5rem !important;}
-body #header-desk .rowhead #menu-perfil{right:0 !important}
+body #header-desk .rowhead{max-width:70.5rem !important}
 body #header-desk #right-hdbtn{text-align:right;}
 body #header-desk #right-hdbtn img{height:50px;width:50px;border-radius:50px;margin-top:-3px}
 body #header-desk #left-hdbtn{text-align:left}
@@ -76,6 +75,8 @@ body .left-off-canvas-menu li a:hover,body .right-off-canvas-menu li a:hover{bac
 .main-section .aside-container .perfil-box .img-profile .imagen img{width:100px;height:100px;padding:2px;border-radius:100px;border:1px solid #000;margin-top:-50px;transition:all 1s;-webkit-transition:all 1s;-o-transition:all 1s;-moz-transition:all 1s;}
 .main-section .aside-container .perfil-box .img-profile .imagen img:hover{border-radius:2px}
 .main-section .aside-container .perfil-box .info-profile .info-name{padding-top:1.5em;}
+.main-section .aside-container .perfil-box .info-profile .info-name #exp-container{background:#eeeff0;border-radius:5px;max-width:800px;height:5px;margin:-5px 5px 5px 5px;}
+.main-section .aside-container .perfil-box .info-profile .info-name #exp-container #exp{background:#881c24;height:5px;border-radius:5px}
 .main-section .aside-container .perfil-box .info-profile .info-name ul .info-estadistics{list-style:none;display:inline-block;margin:0 .5em;}
 @media only screen and (max-width: 870px){.main-section .aside-container .perfil-box .info-profile .info-name ul .info-estadistics{margin:0}
 }.main-section .aside-container .perfil-box .info-profile .info-name ul .info-estadistics .info-number{margin-bottom:-.6em}

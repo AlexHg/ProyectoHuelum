@@ -176,6 +176,21 @@
 		    <section class="main-section" id="contenido">
 			<!-- El contenido de la pagina va aqui -->
 				<div class="row">
+					<div class="aside-box crearPost visible-phone">
+						<h4 align="center">Nueva publicacion</h4>
+						<form class="escribir-post" name="escribirPost" id="escribirPost" method="GET">
+							<!--Con php tambien se enumerará el name del form-->
+							<textarea class="escribirPost-area" placeholder="escribe algo que me agrade... "></textarea>
+							<div id="inputs">
+								<div class="cont-6 columna">
+									<input type="file" >
+								</div>
+								<div class="cont-6 columna" id="submit">
+									<input type="submit" class="button alert radius small" value="Publicar">
+								</div>
+							</div>		
+						</form> 
+					</div>
 					<div class="cont-12 sin-padding-mobil-laterales">
 						<section class="cont-8 columna" id="article-container">
 
@@ -221,17 +236,17 @@
 
 											<a class="favs-icon" id="favs-icon1" onclick="commentBox(1,1)">
 												<span class="fi-star"></span>
-												<span class="favs-num">345</span>
+												<span class="favs-num">6</span>
 											</a>
 												
 											<a class="likes-icon" id="likes-icon1" onclick="commentBox(1,2)">
 												<span class="fi-heart "></span>
-												<span class="likes-num">45</span>
+												<span class="likes-num">25</span>
 											</a>
 											
 											<a class="comments-icon" id="comments-icon1" onclick="commentBox(1,3)">
 												<span class="fi-comment"></span>
-												<span class="comments-num">45</span>
+												<span class="comments-num">3</span>
 											</a>
 										</div>
 									</div>
@@ -248,9 +263,17 @@
 										<div class="article-comment-comments">
 										  <div class="comentario-hover">
 												<!--Inicio comentario hover-->
-											<div class="comentario">
+											<div class="comentario" id="comentario1">
 												<div class="comment-delete">
-													<a class="right"><span class="fi-x" ></span></a>
+													<!--Enumerar con php los id="comment-opciones1" el data-dropdown y aria-controls-->
+													<a class="right dropdown" data-dropdown="comment-opciones1" aria-controls="comment-opciones1" data-options="align:left" aria-expanded="false"><span class="fi-widget" ></span></a>
+
+													<ul id="comment-opciones1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+														<li><a href="#">Editar comentario</a></li><!--Opcion visible unicamente si eres el autor o eres moderador-->
+														<li><a href="#">Borrar comentario</a></li><!--Opcion visible unicamente si eres el autor, eres moderador o el dueño de la publicacion-->
+														<li><a href="#">Reportar este comentario</a></li>
+														<li><a href="#">Penalizar al autor</a></li> <!--Opcion visible unicamente si eres moderador-->
+													</ul>
 												</div>
 												<div class="comment-user">
 													<img src="profile-ex.jpg">
@@ -272,15 +295,25 @@
 											</div>
 											<!--Fin comentario hover-->
 										  </div>
-											<div class="comentario">
+											<div class="comentario-hover">
+												<!--Inicio comentario hover-->
+											<div class="comentario" id="comentario1">
 												<div class="comment-delete">
-													<a class="right"><span class="fi-x" style="margin-top:-.5em"></span></a>
+													<!--Enumerar con php los id="comment-opciones1" el data-dropdown y aria-controls-->
+													<a class="right dropdown" data-dropdown="comment-opciones1" aria-controls="comment-opciones1" data-options="align:left" aria-expanded="false"><span class="fi-widget" ></span></a>
+
+													<ul id="comment-opciones1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+														<li><a href="#">Editar comentario</a></li><!--Opcion visible unicamente si eres el autor o eres moderador-->
+														<li><a href="#">Borrar comentario</a></li><!--Opcion visible unicamente si eres el autor, eres moderador o el dueño de la publicacion-->
+														<li><a href="#">Reportar este comentario</a></li>
+														<li><a href="#">Penalizar al autor</a></li> <!--Opcion visible unicamente si eres moderador-->
+													</ul>
 												</div>
 												<div class="comment-user">
 													<img src="profile-ex.jpg">
 												</div>
 												<span class="comment-content">
-													<p>l ejemplo, que la v ción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejempl ción de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejempl.</p>
+													<p>l ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplo, que l ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplo, que l ejemplo, que la variación de una de ellas en los grupos va a responder a una regla general. mo hemos dicho, vamos a encontrar una periodicidad de esas propiedades en la tabla. esto supone, p or ejemplo, que la vari or ejemplo, que la varior ejemplo, que la vari or ejemplo, que</p>
 												</span>
 												<div class="bottom">
 													<div class="comment-option">
@@ -294,9 +327,21 @@
 													
 												</div>
 											</div>
-											<div class="comentario">
+											<!--Fin comentario hover-->
+										  </div>
+										  <div class="comentario-hover">
+												<!--Inicio comentario hover-->
+											<div class="comentario" id="comentario1">
 												<div class="comment-delete">
-													<a class="right"><span class="fi-x" style="margin-top:-.5em"></span></a>
+													<!--Enumerar con php los id="comment-opciones1" el data-dropdown y aria-controls-->
+													<a class="right dropdown" data-dropdown="comment-opciones1" aria-controls="comment-opciones1" data-options="align:left" aria-expanded="false"><span class="fi-widget" ></span></a>
+
+													<ul id="comment-opciones1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+														<li><a href="#">Editar comentario</a></li><!--Opcion visible unicamente si eres el autor o eres moderador-->
+														<li><a href="#">Borrar comentario</a></li><!--Opcion visible unicamente si eres el autor, eres moderador o el dueño de la publicacion-->
+														<li><a href="#">Reportar este comentario</a></li>
+														<li><a href="#">Penalizar al autor</a></li> <!--Opcion visible unicamente si eres moderador-->
+													</ul>
 												</div>
 												<div class="comment-user">
 													<img src="profile-ex.jpg">
@@ -316,6 +361,8 @@
 													
 												</div>
 											</div>
+											<!--Fin comentario hover-->
+										  </div>
 											<form class="escribir-comentario" name="escribirComentario" id="escribirComentario1" action="enviarcomentario.php" method="post">
 												<!--Con php tambien se enumerará el name del form-->
 												<textarea class="escribir" name="comentario" placeholder="escribe sobre el post... " onkeypress="if (event.keyCode == 13) enviarComentario(1)"></textarea>
@@ -376,7 +423,7 @@
 							
 							
 						</section>
-						<aside class="cont-4 columna hidden-phone aside-container">
+						<aside class="cont-4 columna aside-container">
 							<!-- Solo esta presente en ordenadores -->
 							<div class="perfil-box panel sin-padding">
 								<div class="head-profile" style="background:url('profile-back-ex.jpg')"></div>
@@ -401,10 +448,21 @@
 												<h3><small>Grupos</small></h3>
 											</li>
 										</ul>
+										<br>
+										<h5>Nivel 12</h5>
+										<div id="exp-container">
+											<div id="exp" style="width:32.47%"></div>
+										</div>
+										<small >
+											<a href="">Favoritos</a> / 
+											<a href="">Logros</a> / 
+											<a href="">Proyectos</a> / 
+											<a href="">Preguntas</a>
+										</small>
 									</div>
 								</div>
 							</div>
-							<div class="aside-box crearPost">
+							<div class="aside-box crearPost hidden-phone">
 								<h4 align="center">Nueva publicacion</h4>
 								<form class="escribir-post" name="escribirPost" id="escribirPost" method="GET">
 									<!--Con php tambien se enumerará el name del form-->
